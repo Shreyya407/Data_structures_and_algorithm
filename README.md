@@ -1,7 +1,7 @@
-#Data Structures and Algorithms
+# Data Structures and Algorithms
 - This repository contains DSA problems and solutiions
 
-#Language Used
+# Language Used
 - C++
 
 # Topics to be Covered
