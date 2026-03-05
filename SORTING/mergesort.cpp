@@ -1,31 +1,53 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-int partition (vector<int> &arr , int start , int end){
-    int idx= start-1 ,pivot =arr[end];
 
-    for(int j= start; j<end; j++){
-        if(arr[j]<= pivot){
-        idx++;
-        swap(arr[j],arr[idx]);
+void merge(vector<int> &arr , int start , int mid , int end)
+{
+    vector<int> temp; 
+    int i= start , j=mid +1;
+
+
+    while(i<=mid && j<=end){
+        if(arr[i]<=arr[j]){
+            temp.push_back(arr[i]);
+            i++;
+        }
+        else{
+            temp.push_back (arr[j]);
+            j++;
         }
     }
-    idx++;
-    swap(arr[end],arr[idx]);
-    return idx;
+        while(i<=mid){
+            temp.push_back(arr[i]);
+            i++;
+        }
+
+        while(j<=end){
+            temp.push_back(arr[j]);
+            j++;
+        }
+    
+for (int idx =0; idx<temp.size(); idx++){
+    arr[idx+start]=temp[idx];
+}
+    
+}
+void mergesort( vector<int> &arr, int start , int end){
+   if (start< end){
+
+    int mid= start+ (end-start)/2;
+
+    mergesort(arr, start, mid) ;//LEFT
+    mergesort(arr, mid+1,end); //RIGHT
+
+    merge(arr,start,mid,end);
+   }
 }
 
-void quicksort(vector<int> &arr , int start , int end){
-    if(start<end){
-        int pivIdx=partition(arr,start,end);
-        quicksort(arr,start,pivIdx-1);  //left
-        quicksort(arr,pivIdx+1,end); //right
-
-    }
-}
 int main(){
     vector<int> arr = {12,31,38,32,17};
-    quicksort(arr,0,arr.size()-1);
+    mergesort(arr,0,arr.size()-1);
 
     for(int val: arr) {
         cout<<val<<" ";
