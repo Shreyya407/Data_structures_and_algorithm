@@ -2,7 +2,7 @@
 - This repository contains DSA problems and solutiions
 
 #Language Used
-C++
+- C++
 
 # Topics to be Covered
 - Sorting
