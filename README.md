@@ -1,5 +1,5 @@
 #Data Structures and Algorithms
-This repository contains DSA problems and solutiions
+- This repository contains DSA problems and solutiions
 
 #Language Used
 C++
