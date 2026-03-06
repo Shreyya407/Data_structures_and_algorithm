@@ -1,6 +1,6 @@
 # Data Structures and Algorithms
 
-This repository contains my implementations and practice problems for Data Structures and Algorithms in C++.
+This repository contains my implementations and practice problems for Data Structures and Algorithms.
 
 ## Language
 C++
