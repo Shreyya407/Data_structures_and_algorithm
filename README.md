@@ -6,7 +6,7 @@ This repository contains my implementations and practice problems for Data Struc
 C++
 
 ## Topics to be Covered
-- Some basics 
+- Basic Coding 
 - Sorting Algorithms
 - Arrays
 - Binary Search
