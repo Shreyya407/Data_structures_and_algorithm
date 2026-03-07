@@ -16,9 +16,10 @@ int main(){
         largest=arr[i];
         }
         
-        else(arr[i]<largest && arr[i]>slargest){
-        arr[i]=slargest;
+        if(arr[i]<largest && arr[i]>slargest){
+            arr[i]=slargest;
         }
+        
     }
     cout<<slargest;
 }
