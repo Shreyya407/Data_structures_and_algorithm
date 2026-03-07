@@ -9,10 +9,14 @@ int main(){
     int slargest = -1;
 
     for(int i=1;i<n;i++){
-        if(arr[i]>largest)
+        if(arr[i]>largest){
         slargest=largest;
         largest=arr[i];
-
+        }
+        
+        else(arr[i]<largest && arr[i]>slargest){
+        arr[i]=slargest;
+        }
     }
     cout<<slargest;
 }
